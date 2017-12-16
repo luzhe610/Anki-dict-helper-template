@@ -1,0 +1,60 @@
+{{FrontSide}}
+<div class="section">
+    <div id="definition" class="item">{{释义}}</div>
+</div>
+
+<div class="section">
+    {{#笔记}}
+    <div id="notes" class="item">{{笔记}}</div>
+    {{/笔记}}
+</div>
+
+<div class="bar">
+    {{#来源}}
+    <div id="url">
+        来源: <a href={{网址}}></a>{{网址}}</a>
+    </div>
+    {{/来源}}
+</div>
+
+<!-- 
+JS帮助函数
+效果：词性彩色高亮。在指定的区块中，若有英语词性符号，则高亮成预定义的彩色背景
+用法：将下列函数querySelectorAll('#back')中的back，换成含有英语词性的区块ID
+举例：比如正面字段所在区块<div id="front">包含了形如Test - 'n.测试'这样的英语单词解释，需要高亮词性n. 那么只要把下列函数中相应地方改为querySelectorAll('#front')就可以了
+-->
+
+<script type="text/javascript">
+    var colorMap = {
+        'n.': '#e3412f',
+        'a.': '#f8b002',
+        'adj.': '#f8b002',
+        'ad.': '#684b9d',
+        'adv.': '#684b9d',
+        'v.': '#539007',
+        'vi.': '#539007',
+        'vt.': '#539007',
+        'prep.': '#04B7C9',
+        'conj.': '#04B7C9',
+        'pron.': '#04B7C9',
+        'art.': '#04B7C9',
+        'num.': '#04B7C9',
+        'int.': '#04B7C9',
+        'interj.': '#04B7C9',
+        'modal.': '#04B7C9',
+        'aux.': '#04B7C9',
+        'pl.': '#D111D3',
+        'abbr.': '#D111D3',
+    };
+    [].forEach.call(document.querySelectorAll('#definition'), function (div) {
+        div.innerHTML = div.innerHTML
+            .replace(/\b[a-z]+\./g, function (symbol) {
+                if (colorMap[symbol]) {
+                    return '<a class="hightlight" style="background-color:' +
+                        colorMap[symbol] + ';" >' + symbol + '</a>';
+                } else {
+                    return symbol;
+                }
+            });
+    });
+</script>

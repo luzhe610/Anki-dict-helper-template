@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'font-main';
+    src: url('_msyh.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.card {
+    font: 16px/1.5em 'font-main', sans-serif;
+    background-color: #e9ebee;
+}
+
+.bar {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #365899;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.section {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.item {
+    margin: 8px 12px;
+}
+
+#expression {
+    font-size: 1.5em;
+}
+
+#phonetic {
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
+
+#definition {}
+
+#sentence {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #365899;
+}
+
+#url a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#sentence b {
+    font-weight: normal;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #365899;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.hightlight {
+    border-radius: 3px;
+    color: #fff;
+    padding: 0 3px;
+    margin-right: 5px;
+}
