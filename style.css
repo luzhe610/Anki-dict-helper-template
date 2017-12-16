@@ -9,7 +9,9 @@
     font: 16px/1.5em 'font-main', sans-serif;
     background-color: #e9ebee;
 }
-
+hr {
+    margin: 2px;
+}
 .bar {
     font-size: 0.8em;
     color: #fff;
